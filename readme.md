@@ -24,6 +24,7 @@ var melodia = ~concat.(//concatena la ~melodiaEnArrays -- e.g [["B4"], ["C5", "B
 	~melodiaEnArrays 
 		.collect(_.namemidi)
 		.collect(_.midicps));
+		
 ~taskMaker.(melodía,\miSynthdef).play //inyecta la melodia junto con un SynthDef a una función que genera un Task 
 )
 
