@@ -23,9 +23,7 @@ Aplica una función a `this` y regresa el resultado de esa función.  Resulta ú
 var melodia = ~concat.(//concatena la ~melodiaEnArrays -- e.g [["B4"], ["C5", "Bb6"]] -> ["B4", "C5", "Bb6"]
 	~melodiaEnArrays 
 		.collect(_.namemidi)
-		.collect(_.midicps)
-);
-
+		.collect(_.midicps));
 ~taskMaker.(melodía,\miSynthdef).play //inyecta la melodia junto con un SynthDef a una función que genera un Task 
 )
 
