@@ -1,7 +1,8 @@
 # supercollider extensions
 
 ## Classes/Object
-`pipe`:  Aplica una función a `this` y regresa el resultado de esa función.  Resulta útil para aplicar funciones encadenadas.
+### `pipe`  
+Aplica una función a `this` y regresa el resultado de esa función.  Resulta útil para aplicar funciones encadenadas.
  
  Ejemplo Básico:
  ```
