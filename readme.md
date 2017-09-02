@@ -21,20 +21,20 @@ Aplica una función a `this` y regresa el resultado de esa función.  Resulta ú
 //Permite transformar esto:
 (
 var melodia = ~concat.(//concatena la ~melodiaEnArrays -- e.g [["B4"], ["C5", "Bb6"]] -> ["B4", "C5", "Bb6"]
-	~melodiaEnArrays 
-		.collect(_.namemidi)
-		.collect(_.midicps));
-		
+  ~melodiaEnArrays 
+    .collect(_.namemidi)
+    .collect(_.midicps));
+    
 ~taskMaker.(melodía,\miSynthdef).play //inyecta la melodia junto con un SynthDef a una función que genera un Task 
 )
 
 //en esto:
 (
 ~melodiaEnArrays
-	.collect(_.namemidi) 
-	.collect(_.midicps) 
-	.pipe(~concat.(_)) // hasta aquí lo que arriba es la variable "melodía"
-	.pipe(~taskMaker.(_, \miSynthdef)) //inyecta la melodia junto con un SynthDef a una función que genera un Task 
-	.play 
+  .collect(_.namemidi) 
+  .collect(_.midicps) 
+  .pipe(~concat.(_)) // hasta aquí lo que arriba es la variable "melodía"
+  .pipe(~taskMaker.(_, \miSynthdef)) //inyecta la melodia junto con un SynthDef a una función que genera un Task 
+  .play 
 )
 ```
