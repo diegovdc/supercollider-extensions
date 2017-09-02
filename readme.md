@@ -7,8 +7,13 @@ Aplica una función a `this` y regresa el resultado de esa función.  Resulta ú
  
  Ejemplo Básico:
  ```
- 5.pipe({|n| 2*n}).pipe({|n| [n]})// [10]
+ ~timesTwo = {|n| 2*n};
+ ~toArray = {|n| [n]};
+ 
+ 5.pipe(~timesTwo).pipe(~toArray)// [10]
 
+//equivalente a:
+~toArray.(~timesTwo.(5))
  ```
 
  Ejemplo de uso real:
